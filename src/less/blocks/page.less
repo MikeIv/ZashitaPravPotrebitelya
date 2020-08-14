@@ -1,12 +1,27 @@
 /*-- Page --*/
 .page {
-  font-family: "Arial", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
 }
 
 .page__body {
+  display: grid;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+  grid-template-rows: 60px 1fr 300px;
+  grid-template-columns: 1fr;
+
+  min-height: 100vh;
+
   margin: 0;
   padding: 0;
 
   box-sizing: border-box;
+  background-image: url("/img/bg_mobile.jpg");
+  background-position: top 0px right 0px;
+  background-size: auto 570px;
+
+  overflow-x: hidden;
 }

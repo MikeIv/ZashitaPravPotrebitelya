@@ -123,17 +123,118 @@ img {
   font-size: 0;
   overflow: hidden;
 }
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-Regular.woff2') format('woff2'), url('/fonts/Raleway-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-LightItalic.woff2') format('woff2'), url('/fonts/Raleway-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-Bold.woff2') format('woff2'), url('/fonts/Raleway-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-Light.woff2') format('woff2'), url('/fonts/Raleway-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-Italic.woff2') format('woff2'), url('/fonts/Raleway-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-SemiBold.woff2') format('woff2'), url('/fonts/Raleway-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-Medium.woff2') format('woff2'), url('/fonts/Raleway-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 /*-- Page --*/
 .page {
-  font-family: "Arial", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
 }
 .page__body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 60px 1fr 300px;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-image: url("/img/bg_mobile.jpg");
+  background-position: top 0px right 0px;
+  background-size: auto 570px;
+  overflow-x: hidden;
+}
+/*-- header --*/
+.header {
+  position: relative;
+  grid-area: header;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: transparent;
+}
+.header__h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  color: #ffffff;
+}
+.header__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 .main {
+  grid-area: main;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -149,36 +250,12 @@ img {
   -webkit-align-items: center;
           align-items: center;
   width: 100%;
-  min-height: 300px;
   margin: 0 auto;
-  background-color: #a0a0a0;
-}
-/*-- header --*/
-.header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  width: 100%;
-  height: 100px;
-  margin: 0 auto;
-  padding: 0;
-  background-color: #ffffff;
-}
-.header__h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 2em;
-  font-weight: bold;
-  color: #004DA6;
+  background-color: transparent;
 }
 /*-- footer --*/
 .footer {
+  grid-area: footer;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -189,10 +266,9 @@ img {
   -webkit-align-items: center;
           align-items: center;
   width: 100%;
-  height: 100px;
   margin: 0 auto;
   padding: 0;
-  background-color: #003573;
+  background-color: #00385C;
 }
 .footer__h2 {
   margin: 0;

@@ -5,6 +5,7 @@
 }
 
 .page__body {
+  position: relative;
   display: grid;
   grid-template-areas:
   "header"
@@ -18,11 +19,16 @@
   margin: 0;
   padding: 0;
 
-  box-sizing: border-box;
-  background-image: url("/img/bg_mobile.jpg");
-  background-position: top 0px right 0px;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
 
   overflow-x: hidden;
+}
+
+.page__body-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: auto;
+
+  object-fit: cover;
 }

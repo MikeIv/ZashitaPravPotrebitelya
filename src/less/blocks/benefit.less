@@ -1,3 +1,91 @@
 .benefit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 
+  width: 100%;
+  min-height: 35em;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: @white;
+}
+
+.benefit__wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.benefit__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+.benefit__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  margin: 0;
+  margin-bottom: 4em;
+  padding: 0;
+  padding-left: 3em;
+  box-sizing: border-box;
+}
+
+.benefit__item::before {
+  position: absolute;
+  content: "";
+  top: calc(50% - 1em);
+  left: 0;
+
+  width: 1.9em;
+  height: 2em;
+
+  margin: 0;
+  padding: 0;
+
+  background-image: url("/img/i_check.svg");
+  background-repeat: no-repeat;
+}
+
+.benefit__item-txt {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.2em;
+  font-weight: 500;
+  color: @base;
+}
+
+
+
+.benefit__bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  object-fit: cover;
 }

@@ -88,3 +88,84 @@
 .header__txt--bold {
   font-weight: bold;
 }
+
+
+/*--- desctop col --*/
+.header__col-desktop {
+  display: none;
+}
+
+
+/*--- media ---*/
+@media screen and (min-width: 700px) {
+
+  .header__col-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 1;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .header__txt--desk-header {
+    width: 100%;
+
+    margin: 0;
+    margin-bottom: 0.2rem;
+    padding: 0;
+
+    font-size: 1em;
+    color: @red;
+  }
+
+  .header__desktop-row {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .header__desktop-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 12em;
+
+    margin: 0;
+    margin-right: 1em;
+    padding: 0;
+  }
+
+  .header__phone {
+    margin: 0;
+    padding: 0;
+
+    font-family: @font-family-roboto;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: @dark;
+    text-decoration: none;
+
+    cursor: pointer;
+  }
+
+  .header__txt--desk-time {
+    font-size: 0.8em;
+    color: @red;
+  }
+
+
+  .header__btn {
+    .btn();
+
+    font-size: 0.6rem;
+  }
+
+}

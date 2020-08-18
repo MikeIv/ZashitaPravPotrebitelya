@@ -31,6 +31,8 @@
 }
 
 .benefit__list {
+  grid-area: benefit;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -88,4 +90,36 @@
   right: 0;
 
   object-fit: cover;
+}
+
+
+
+
+
+
+
+
+/*--- media ---*/
+@media screen and (min-width: 700px) {
+
+  .benefit {
+    grid-area: benefit;
+
+    background-color: transparent;
+  }
+
+  .benefit__wrapper {
+    max-width: 23em;
+    margin-left: auto;
+    margin-right: 5em;
+  }
+
+
+  .benefit__bg {
+    display: none;
+  }
+
+
+
+
 }

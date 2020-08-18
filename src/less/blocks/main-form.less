@@ -1,4 +1,6 @@
 .main-form {
+  grid-area: main-form;
+
   display: flex;
   justify-content: center;
 
@@ -7,12 +9,15 @@
 
   margin: 0;
   padding: 0;
+
+
   font-family: @font-family-base;
 
   background-color: @lightgreen;
 }
 
 .main-form__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -152,9 +157,42 @@
   padding: 0;
 }
 
-.main-form-btn {
+.main-form__btn {
   .btn();
 
   margin-bottom: 2em;
+}
+
+.js_main-form__btn-popup-form-1 {
+
+}
+
+
+
+
+
+/*--- media ---*/
+@media screen and (min-width: 700px) {
+
+  .main-form {
+    padding-bottom: 2em;
+    background-color: transparent;
+  }
+
+  .main-form-2 {
+    grid-area: main-form-2;
+  }
+
+  .main-form__wrapper {
+    max-width: 30em;
+    margin-right: auto;
+    margin-left: 5em;
+
+    background-color: @white;
+
+  }
+
+
+
 
 }

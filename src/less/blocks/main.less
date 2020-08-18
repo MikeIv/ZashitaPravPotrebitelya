@@ -1,6 +1,8 @@
 .main {
   grid-area: main;
 
+
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10,4 +12,31 @@
 
   margin: 0 auto;
   background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+/*--- media ---*/
+@media screen and (min-width: 700px) {
+  .main {
+    display: grid;
+    grid-template-areas:
+      "main-top main-top"
+      "benefit   main-form"
+      "services   services"
+      "gratitude   gratitude"
+      "efficiency    efficiency"
+      "principals   principals"
+      "protection   main-form-2"
+      "map   contacts";
+    grid-template-rows: 15em 40em 50em 30em 10em 1fr 40em 15em;
+    grid-template-columns: 1fr 1fr;
+  }
+
 }
